@@ -1,0 +1,49 @@
+{
+  "name": "simple-wa-bot",
+  "version": "1.0.0",
+  "description": "Simple WhatsApp Bot optimized for Android devices",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "setup": "node setup.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop wa-bot",
+    "pm2:restart": "pm2 restart wa-bot",
+    "pm2:logs": "pm2 logs wa-bot",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "media": "node create-media.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "baileys",
+    "android",
+    "termux",
+    "pairing-code"
+  ],
+  "author": "Ditzy Time",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.8",
+    "axios": "^1.6.7",
+    "chalk": "^4.1.2",
+    "file-type": "^16.5.4",
+    "fs-extra": "^11.2.0",
+    "moment-timezone": "^0.5.45",
+    "node-fetch": "^2.7.0",
+    "pino": "^8.19.0",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aditsalvani43-ui/bot-ditzy-main.git"
+  }
+}
